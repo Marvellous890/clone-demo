@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub Workflow Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-group">
+        <div class="git-icon-badge">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="3" x2="6" y2="15"></line>
+            <circle cx="18" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M18 9a9 9 0 0 1-9 9"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>GitFlow Hub</h1>
+          <p class="subtitle">Interactive Git & GitHub Workflow Visualizer</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">Repository Cloned & Ready</span>
+      </div>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="main-content">
+      <!-- Workflow Visualizer Card -->
+      <section class="card workflow-card">
+        <h2>Git Workflow Architecture</h2>
+        <p class="card-desc">Click any state to explore how code moves from Working Directory to Remote Repository.</p>
+
+        <div class="pipeline">
+          <div class="stage-node" data-stage="working">
+            <div class="stage-icon">📁</div>
+            <h3>Working Directory</h3>
+            <span class="badge">Unstaged Changes</span>
+          </div>
+
+          <div class="pipeline-arrow">
+            <span class="arrow-label">git add</span>
+            <div class="arrow-line"></div>
+          </div>
+
+          <div class="stage-node" data-stage="staging">
+            <div class="stage-icon">📦</div>
+            <h3>Staging Area</h3>
+            <span class="badge">Index</span>
+          </div>
+
+          <div class="pipeline-arrow">
+            <span class="arrow-label">git commit</span>
+            <div class="arrow-line"></div>
+          </div>
+
+          <div class="stage-node" data-stage="local">
+            <div class="stage-icon">💾</div>
+            <h3>Local Repository</h3>
+            <span class="badge">HEAD / Commits</span>
+          </div>
+
+          <div class="pipeline-arrow">
+            <span class="arrow-label">git push</span>
+            <div class="arrow-line"></div>
+          </div>
+
+          <div class="stage-node" data-stage="remote">
+            <div class="stage-icon">☁️</div>
+            <h3>GitHub Remote</h3>
+            <span class="badge">Origin / Main</span>
+          </div>
+        </div>
+
+        <div id="stage-details" class="details-panel">
+          <h4 id="detail-title">Select a Stage Above</h4>
+          <p id="detail-desc">Interactive details will appear here as you click on different components of the Git lifecycle.</p>
+          <code id="detail-command" class="command-box">$ git status</code>
+        </div>
+      </section>
+
+      <!-- Essential Commands Card -->
+      <section class="card commands-card">
+        <h2>Essential Git Commands</h2>
+        <div class="command-grid">
+          <div class="command-item">
+            <span class="cmd-tag">Clone</span>
+            <code>git clone &lt;repo-url&gt;</code>
+            <p>Download remote repository & full history locally</p>
+          </div>
+          <div class="command-item">
+            <span class="cmd-tag">Status</span>
+            <code>git status</code>
+            <p>Inspect working directory and staged changes</p>
+          </div>
+          <div class="command-item">
+            <span class="cmd-tag">Commit</span>
+            <code>git commit -m "msg"</code>
+            <p>Save staged snapshot into repository history</p>
+          </div>
+          <div class="command-item">
+            <span class="cmd-tag">Push</span>
+            <code>git push origin main</code>
+            <p>Upload local commits to remote GitHub server</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Demonstration Project 1 — Prepared for Git & GitHub Live Presentation</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
