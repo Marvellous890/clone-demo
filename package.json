@@ -1,0 +1,12 @@
+{
+  "name": "project-1-clone-demo",
+  "version": "1.0.0",
+  "description": "Git & GitHub Interactive Workflow Hub — Demonstration App for Cloning",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": ["git", "github", "presentation", "demo"],
+  "author": "Presenter",
+  "license": "MIT"
+}
